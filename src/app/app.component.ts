@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskModel } from '../models/task.model'
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-plate';
-  name = 'Syrym'
+  taskText: string = '';
+  tasks: TaskModel[] = [ new TaskModel('First task'), new TaskModel('Second Task')]
+
+  onFormSubmit() {
+    this.tasks.push(
+      new TaskModel(this.taskText)
+    )
+    this.taskText = ''
+  }
 }

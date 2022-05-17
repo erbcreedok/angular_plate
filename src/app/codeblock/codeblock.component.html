@@ -1,9 +1,0 @@
-<mat-form-field appearance="fill">
-  <mat-label>Enter name</mat-label>
-  <input matInput [(ngModel)]="name">
-</mat-form-field>
-<input type="text" [(ngModel)]="name">
-<button (click)="onButtonClick()" [disabled]="name.length < 1">Click me</button>
-<div>
-  <app-character-box *ngFor="let character of characters; let i = index" [ngStyle]="{color: getCharacterColor(character)}" [character]="character"></app-character-box>
-</div>

@@ -1,3 +1,19 @@
-<div> Hello world, My name is {{ name }}</div>
-<app-codeblock></app-codeblock>
-<app-movie-block></app-movie-block>
+<div class="todo_container">
+  <h2 class="todo_title">TODO Application</h2>
+  <div class="todo_create_form">
+
+    <mat-form-field class="input-full_width" appearance="fill">
+      <mat-label>Enter text</mat-label>
+      <input type="email" matInput [(ngModel)]="taskText" placeholder="Enter text">
+    </mat-form-field>
+
+    <button class="todo_create_button" mat-flat-button color="primary" (click)="onFormSubmit()">Create</button>
+
+  </div>
+
+  <ul class="todo_list">
+    <li *ngFor="let task of tasks" class="todo_item">
+      <p class="todo_item-title">{{ task.text }}</p>
+    </li>
+  </ul>
+</div>

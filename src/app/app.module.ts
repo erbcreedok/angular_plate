@@ -1,23 +1,16 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
+import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { AppComponent } from './app.component';
-import { CodeblockComponent } from './codeblock/codeblock.component';
-import { MovieBlockComponent } from './movie-block/movie-block.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CharacterBoxComponent } from './character-box/character-box.component';
-import { TodoItemComponent } from './todo-item/todo-item.component'
+import { AppComponent } from './app.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    CodeblockComponent,
-    MovieBlockComponent,
-    CharacterBoxComponent,
-    TodoItemComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +18,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component'
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
