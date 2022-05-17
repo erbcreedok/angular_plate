@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoCreateFormComponent } from './todo-create-form/todo-create-form.component'
+import { TodoService } from './todo.service'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { TodoCreateFormComponent } from './todo-create-form/todo-create-form.com
     MatCheckboxModule,
     MatIconModule,
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
